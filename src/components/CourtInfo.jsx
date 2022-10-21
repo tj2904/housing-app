@@ -10,7 +10,7 @@ function CourtInfo() {
   return (
     <>
       <h2>Court Info Questionnaire</h2>
-      <Button>Print for Court</Button>
+      <Button className="disabled">🖨 Print for Court</Button>
     </>
   );
 }

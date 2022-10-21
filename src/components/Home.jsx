@@ -14,7 +14,7 @@ function Home() {
 
     try {
       await logout();
-      navigate("/login");
+      navigate("/");
     } catch {
       setError("Failed to log out");
     }
@@ -28,13 +28,17 @@ function Home() {
         </Card.Header>
         <Card.Body>
           <div>
-            <p>
-             Update at least this <code>div</code>, if not the whole page.
-            </p>
+            <p>Update this page.</p>
             <p>
               The block below is conditionally rendered depending on the status
-              of the <code>currentUser</code> for demonstration purposes and will be removed.
+              of the <code>currentUser</code> for demonstration purposes and
+              will be removed.
             </p>
+          </div>
+          <div className="text-center d-flex justify-content-evenly ">
+            <Link to="/eligibility">Eligibility</Link>
+            <Link to="/details">Solicitor Info</Link>
+            <Link to="/court">Court Form 🔒</Link>
           </div>
         </Card.Body>
         <Card.Footer className="text-center d-flex justify-content-evenly ">
@@ -42,11 +46,11 @@ function Home() {
             Login
           </Link>
 
-          <Link to="/signup" className=" btn btn-info">
+          <Link to="/signup" className=" btn btn-secondary">
             Sign Up
           </Link>
 
-          <Button variant="secondary" onClick={handleLogout}>
+          <Button variant="danger" onClick={handleLogout}>
             Log Out
           </Button>
         </Card.Footer>

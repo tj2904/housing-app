@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import "./App.css"
 import { AuthProvider } from "../contexts/AuthContext";
 import Profile from "./Profile";
 import Home from "./Home";
@@ -16,10 +17,10 @@ import Eligibility from "./Eligibility";
 function App() {
   return (
     <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+      className="d-flex align-items-center justify-content-center mt-4"
+      
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" >
         <AuthProvider>
           <Router>
             <Routes>

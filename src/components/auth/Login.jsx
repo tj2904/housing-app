@@ -29,7 +29,7 @@ export default function Login() {
   }
 
   return (
-    <>
+    <div style={{ maxWidth: "400px" }} className="centered-container">
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -55,6 +55,6 @@ export default function Login() {
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
-  )
+    </div>
+  );
 }
