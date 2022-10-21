@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
   async function signup(email, password) {
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      await addDoc(collection(db, "test-users"), {
+      await addDoc(collection(db, "users"), {
         uid: res.user.uid,
         name: "",
         authProvider: "local",
@@ -72,7 +72,7 @@ export function AuthProvider({ children }) {
   async function deleteCurrentUser() {
     const user = currentUser.uid;
     // https://cloud.google.com/firestore/docs/query-data/get-data
-    const q = query(collection(db, "test-users"), where("uid", "==", user));
+    const q = query(collection(db, "users"), where("uid", "==", user));
 
     const querySnapshot = await getDocs(q);
 
