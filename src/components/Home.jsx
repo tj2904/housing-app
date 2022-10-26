@@ -22,6 +22,7 @@ function Home() {
 
   return (
     <>
+    <h1>Housing App</h1>
       <Card>
         <Card.Header as="h3" className="text-center">
           Home Page
