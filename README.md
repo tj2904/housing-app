@@ -5,6 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Clone the repo locally and run `npm install` in install all of the required dependencies.
 
+Add a `.env` file in the root of the project to connect Firebase to the App. Details for the contents are on [Confluence](https://castild21.atlassian.net/wiki/spaces/HA/pages/1966085/.env+file).
+
 `npm start` runs the app in the development mode, if it doesn't do so automatically, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
