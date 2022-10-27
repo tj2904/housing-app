@@ -23,6 +23,9 @@ function Home() {
   return (
     <>
     <h1>Housing App</h1>
+    <p>
+      Intro
+    </p>
       <Card>
         <Card.Header as="h3" className="text-center">
           Home Page

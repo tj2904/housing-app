@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import "./App.css"
+import "../components/App.css"
 import { AuthProvider } from "../contexts/AuthContext";
-import Profile from "./Profile";
-import Home from "./Home";
-import Login from "./auth/Login";
-import Signup from "./auth/Signup";
-import PrivateRoutes from "./PrivateRoutes";
-import ForgotPassword from "./auth/ForgotPassword";
-import UpdateProfile from "./auth/UpdateProfile";
-import CourtInfo from "./CourtInfo";
-import Details from "./Details";
-import Eligibility from "./Eligibility";
+import Profile from "../pages/Profile";
+import Home from "../pages/Home";
+import Login from "../pages/auth/Login";
+import Signup from "../pages/auth/Signup";
+import PrivateRoutes from "../components/PrivateRoutes";
+import ForgotPassword from "../pages//auth/ForgotPassword";
+import UpdateProfile from "../pages//auth/UpdateProfile";
+import CourtInfo from "../pages/CourtInfo";
+import Details from "../pages/Details";
+import Eligibility from "../pages/Eligibility";
 
 function App() {
   return (

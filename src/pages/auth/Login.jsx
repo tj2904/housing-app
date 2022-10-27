@@ -29,7 +29,7 @@ export default function Login() {
   }
 
   return (
-    <div style={{ maxWidth: "400px" }} className="centered-container">
+    <div style={{ maxWidth: "600px" }} className="centered-container">
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
