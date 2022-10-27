@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function Details() {
   return (
+    // This uses react bootstrap components to build the card.
+    // It will need altering to function well in the final app so that it can map over results
+    // We need to decide how this is powered at somepoint too - JSON maybe the best way forward, 
+    // but we could use a db
+
+    // If keeping maps this needs to be implemented properly
     <>
       <h2>Law Firm Details page</h2>
       <div className="">

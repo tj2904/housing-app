@@ -23,6 +23,8 @@ export default function Profile() {
   }
 
   return (
+    // A basic page to deal with the obvious user account needs
+    // the linked components are in pages/auth
     <>
     <h1 className="text-center">This is the profile page</h1>
       <Card>
