@@ -1,0 +1,29 @@
+.nav-cont{
+    
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cont-log{
+    display: flex;
+    gap: 10px;
+}
+
+.cont-btns{
+    
+}
+
+.cont-log img{
+    width: 40px;
+    height: 40px;
+}
+
+.cont-log h3{
+   margin-top: 3px;
+}
+
+.btn-warning{
+    margin-right: 25px;
+}

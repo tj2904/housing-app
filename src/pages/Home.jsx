@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import { Nav } from "./Nav/Nav";
 
 function Home() {
   const [error, setError] = useState("");
@@ -24,8 +25,7 @@ function Home() {
     // This needs re-doing completely to be the landing/home page that explains the app and it's purpose.
     // Nearly all of the code below should be deleted and replaced with a cool looking page!
  <>
-    <h1>Housing App</h1>
- 
+      <Nav /> 
       <Card>
         <Card.Header as="h3" className="text-center">
           Home Page
