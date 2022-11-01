@@ -45,7 +45,8 @@ export const Nav = () => {
   return (
     <nav className="nav-cont">
       <div className="cont-log">
-        <img src={home} alt="logo" />
+        {/* adds link to the logo to home */}
+        <a href="/"><img src={home} alt="logo" /></a>
         <h3>HOUSING APP</h3>
       </div>
       <ul className="items-men">
