@@ -1,12 +1,30 @@
-import React from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import React, {useState} from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useAuth } from "../../contexts/AuthContext";
 import "./nav.css";
 import home from "../../img/home.png";
 
 export const Nav = () => {
 
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
   //It has to be connected from firebase 
-  const userLog = false; 
+  // const userLog = false; 
+  const { currentUser, logout } = useAuth();
+
+  async function handleLogout() {
+    setError("");
+
+    try {
+      await logout();
+      navigate("/");
+    } catch {
+      setError("Failed to log out");
+    }
+  }
+
 
   const menu = [
     { title: "Home", link: "/" },
@@ -33,19 +51,19 @@ export const Nav = () => {
         })}
       </ul>
       <div className="cont-btns">
-        {!userLog ? (
+        {!currentUser ? (
           <>
-            <Link to="/Register" className="btn btn-info">
+            <Link to="/signup" className="btn btn-info">
               Register
             </Link>{" "}
-            <Link to="/Register" className="btn btn-info">
+            <Link to="/login" className="btn btn-info">
               Login
             </Link>{" "}
           </>
         ) : (
-          <Link to="/signup" className=" btn btn-info">
+          <Button variant="danger" onClick={handleLogout}>
             Log Out
-          </Link>
+          </Button>
         )}
       </div>
     </nav>
