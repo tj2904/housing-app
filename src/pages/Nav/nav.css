@@ -12,7 +12,8 @@
 }
 
 .cont-btns{
-    
+    display: flex;
+    gap: 20px;
 }
 
 .cont-log img{
@@ -26,4 +27,23 @@
 
 .btn-warning{
     margin-right: 25px;
+}
+
+.items-men{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    margin-top: 17px;
+}
+
+.items-men a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.items-men a:hover {
+    color: #0dcaf0;
 }
