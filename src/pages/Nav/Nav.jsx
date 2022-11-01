@@ -1,19 +1,26 @@
 import React, {useState} from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import "./nav.css";
 import home from "../../img/home.png";
 
 export const Nav = () => {
 
+  // useState sets an error message if needed
   const [error, setError] = useState("");
+  // navigate allows for sending the user to a given route
   const navigate = useNavigate();
 
   //It has to be connected from firebase 
   // const userLog = false; 
+
+  // useAuth() is provided by the context and currentUser is an object
+  // if it is present then a user is logged in - used in the conditional
+  // rendering of the login/logout buttons
   const { currentUser, logout } = useAuth();
 
+  // this function logs the user out
   async function handleLogout() {
     setError("");
 
@@ -28,17 +35,17 @@ export const Nav = () => {
 
   const menu = [
     { title: "Home", link: "/" },
-    { title: "About", link: "/" },
-    { title: "Eligibity", link: "/eligibility" },
+    // { title: "About", link: "/" },
+    { title: "Eligibility", link: "/eligibility" },
     { title: "Solicitor Info", link: "/details" },
-    { title: "Court Form", link: "/" },
-    { title: "Contact", link: "/" },
+    { title: "Court Form", link: "/court" },
+    // { title: "Contact", link: "/" },
   ];
 
   return (
     <nav className="nav-cont">
       <div className="cont-log">
-        <img src={home} alt="" />
+        <img src={home} alt="logo" />
         <h3>HOUSING APP</h3>
       </div>
       <ul className="items-men">
@@ -65,6 +72,7 @@ export const Nav = () => {
             Log Out
           </Button>
         )}
+        {error && <Alert variant="danger">{error}</Alert>}
       </div>
     </nav>
   );
