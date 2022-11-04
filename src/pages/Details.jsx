@@ -34,10 +34,11 @@ export default function Details() {
                         {firm.City} <br />
                         {firm.Postcode} <br />
                       </address>
-                      <a href={`tel:${firm.Telephone}`}>{firm.Telephone}</a>
+                      ☎ <a href={`tel:${firm.Telephone}`}>{firm.Telephone}</a>
                       <br />
-                      <a href={`mailto:${firm.email}`}>{firm.email}</a> <br />
-                      <a href={firm.website} target="_blank" rel="noreferrer">
+                      📧 <a href={`mailto:${firm.email}`}>{firm.email}</a>{" "}
+                      <br />
+                      🖥  <a href={firm.website} target="_blank" rel="noreferrer">
                         {firm.website}
                       </a>
                     </Card.Body>
