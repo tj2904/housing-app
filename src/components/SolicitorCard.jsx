@@ -8,7 +8,7 @@ export default function  SolicitorCard(firm) {
     // This uses react bootstrap components to build the card.
     <Card key={firm.id} className=" mb-4 col-12 col-lg-8 mx-auto">
       <CardHeader>
-        <Card.Title>{firm.Firm}</Card.Title>
+        <Card.Title className="mb-0">{firm.Firm}</Card.Title>
       </CardHeader>
       <div className="row g-0">
         <div className="col-md-6">
