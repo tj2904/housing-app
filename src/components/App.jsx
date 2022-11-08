@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import "../components/App.css"
+import "../components/App.css";
 import { AuthProvider } from "../contexts/AuthContext";
 import Profile from "../pages/Profile";
 import Home from "../pages/Home";
@@ -13,16 +12,17 @@ import UpdateProfile from "../pages//auth/UpdateProfile";
 import CourtInfo from "../pages/CourtInfo";
 import Details from "../pages/Details";
 import Eligibility from "../pages/Eligibility";
+import { Navigation } from "./Nav/Navigation";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center mt-4"
-      
-    >
-      <div className="w-100" >
+    <Container className="pt-2">
+      <div className="w-100">
         <AuthProvider>
           <Router>
+            {/* Adding nav here means it will show on all pages */}
+            <Navigation></Navigation>
             <Routes>
               <Route element={<PrivateRoutes />}>
                 <Route path="/profile" element={<Profile />} />

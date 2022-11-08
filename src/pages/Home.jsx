@@ -24,7 +24,6 @@ function Home() {
     // This needs re-doing completely to be the landing/home page that explains the app and it's purpose.
     // Nearly all of the code below should be deleted and replaced with a cool looking page!
  <>
-    <h1>Housing App</h1>
  
       <Card>
         <Card.Header as="h3" className="text-center">
