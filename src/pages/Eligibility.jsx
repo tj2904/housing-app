@@ -10,13 +10,13 @@ function Eligibility() {
 
   return (
     <>
-      <h2>Legal Aid Eligibility Questionnaire</h2>
+      <h2>Legal Aid Eligibility</h2>
 
       {/* Add the redirect to the gov.uk form here - maybe an iframe? */}
 
-      <h3 className="p-4">
+      <p className="lead">
         Please check if you qualify for Legal Aid using the government site:
-      </h3>
+      </p>
 
       <p>
         Examples of images they will see, ie. both outcomes and the page the

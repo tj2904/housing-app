@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Alert,
   Button,
   Container,
   Navbar,
   Nav,
-  NavDropdown,
-  Form,
 } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
-import "./nav.css";
 import home from "../../img/home.png";
 
 export const Navigation = () => {
@@ -40,7 +37,7 @@ export const Navigation = () => {
   }
 
   const menu = [
-    { title: "Home", link: "/" },
+    //{ title: "Home", link: "/" },
     // { title: "About", link: "/" },
     { title: "Eligibility", link: "/eligibility" },
     { title: "Solicitor Info", link: "/details" },
@@ -49,46 +46,42 @@ export const Navigation = () => {
   ];
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#">
-          <div className="cont-log">
-            {/* adds link to the logo to home */}
-            <a href="/">
-              <img src={home} alt="logo" />
-            </a>
-            <h3>HOUSING APP</h3>
-          </div>
+    <Navbar bg="" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            src={home}
+            alt="logo"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{" "}
+          HOUSING APP
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll" className="nav-cont">
-          <Nav
-            className="me-auto my-2 my-lg-0 "
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
             {menu.map((res) => {
-              return <Nav.Link className="items-men"><NavLink to={res.link}>{res.title}</NavLink></Nav.Link> ;
+              return <Nav.Link href={res.link}>{res.title}</Nav.Link>;
             })}
-
-            <div className="cont-btns">
-              {!currentUser ? (
-                <>
-                  <Link to="/signup" className="btn btn-info">
-                    Register
-                  </Link>{" "}
-                  <Link to="/login" className="btn btn-info">
-                    Login
-                  </Link>{" "}
-                </>
-              ) : (
-                <Button variant="danger" onClick={handleLogout}>
-                  Log Out
-                </Button>
-              )}
-              {error && <Alert variant="danger">{error}</Alert>}
-            </div>
           </Nav>
+          <div className=" justify-content-end">
+            {!currentUser ? (
+              <>
+                <Link to="/signup" className="btn btn-info">
+                  Register
+                </Link>{" "}
+                <Link to="/login" className="btn btn-info">
+                  Login
+                </Link>{" "}
+              </>
+            ) : (
+              <Button variant="danger" onClick={handleLogout}>
+                Log Out
+              </Button>
+            )}
+            {error && <Alert variant="danger">{error}</Alert>}
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

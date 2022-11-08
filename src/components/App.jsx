@@ -12,7 +12,7 @@ import UpdateProfile from "../pages//auth/UpdateProfile";
 import CourtInfo from "../pages/CourtInfo";
 import Details from "../pages/Details";
 import Eligibility from "../pages/Eligibility";
-import { Nav, Navigation } from "./Nav/Navigation";
+import { Navigation } from "./Nav/Navigation";
 import { Container } from "react-bootstrap";
 
 function App() {
