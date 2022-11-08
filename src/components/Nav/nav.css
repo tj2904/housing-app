@@ -47,3 +47,9 @@
 .items-men a:hover {
     color: #0dcaf0;
 }
+
+/*@media(  max-width: 600px ){
+    .items-men{
+        display: none;
+    }
+}*/

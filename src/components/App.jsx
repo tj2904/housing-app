@@ -12,7 +12,7 @@ import UpdateProfile from "../pages//auth/UpdateProfile";
 import CourtInfo from "../pages/CourtInfo";
 import Details from "../pages/Details";
 import Eligibility from "../pages/Eligibility";
-import { Nav } from "./Nav/Nav";
+import { Nav, Navigation } from "./Nav/Navigation";
 import { Container } from "react-bootstrap";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <AuthProvider>
           <Router>
             {/* Adding nav here means it will show on all pages */}
-            <Nav></Nav>
+            <Navigation></Navigation>
             <Routes>
               <Route element={<PrivateRoutes />}>
                 <Route path="/profile" element={<Profile />} />
