@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
 function Eligibility() {
-
-  const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
-
-
   return (
     <>
       <h2>Legal Aid Eligibility</h2>
@@ -45,7 +39,8 @@ function Eligibility() {
       ></iframe> */}
 
       <div>
-        <a href="https://www.gov.uk/check-legal-aid"
+        <a
+          href="https://www.gov.uk/check-legal-aid"
           role="button"
           className="m-2 btn btn-dark"
           target="_blank"
