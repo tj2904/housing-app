@@ -29,7 +29,7 @@ export const Navigation = () => {
             width="30"
             height="30"
             className="d-inline-block align-top"
-          />{" "}
+          />{" "} 
           EVICTION SUPPORT
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
