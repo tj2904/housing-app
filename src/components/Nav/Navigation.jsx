@@ -1,16 +1,14 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Alert, Button, Container, Navbar, Nav } from "react-bootstrap";
+import React from "react";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import home from "../../img/home.png";
 
 export const Navigation = () => {
   // useState sets an error message if needed
-  const [error, setError] = useState("");
+ 
   // navigate allows for sending the user to a given route
-  const navigate = useNavigate();
+  
 
-  //It has to be connected from firebase
-  // const userLog = false;
+  
 
   const menu = [
     //{ title: "Home", link: "/" },
@@ -32,7 +30,7 @@ export const Navigation = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          HOUSING APP
+          EVICTION SUPPORT
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
