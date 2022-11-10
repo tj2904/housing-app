@@ -1,81 +1,39 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 import { Link } from "react-router-dom";
+import SolicitorCard from "../components/SolicitorCard";
+import data from "../data/housing-solicitors";
 
 export default function Details() {
+  // Here we map through all of the firms in the list
+  // returning a SolicitorCard component for each one (singleFirm)
+  const firm = data.map((singleFirm) => {
+    return <SolicitorCard {...singleFirm} />;
+  });
+
   return (
-    // This uses react bootstrap components to build the card.
-    // It will need altering to function well in the final app so that it can map over results
-    // We need to decide how this is powered at somepoint too - JSON maybe the best way forward, 
-    // but we could use a db
-
-    // If keeping maps this needs to be implemented properly
     <>
-      <h2>Law Firm Details page</h2>
-      <div className="">
-        <div className="row g-0">
-          <Card className=" mb-4 col-12 col-lg-5 mx-auto">
-            <CardHeader>
-              <Card.Title>Name of Law Firm</Card.Title>
-            </CardHeader>
-            <div className="row g-0">
-              <div className="col-md-6">
-                <Card.Body>
-                  <address>
-                    1 Law Street <br />
-                    Southwark <br />
-                    London <br />
-                    SE1 9IP <br />
-                  </address>
-                  Tel: <a href="tel:0000-000-0000">0121 423 0000</a>
-                </Card.Body>
-              </div>
-              <iframe
-                className="col-md-6"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4425.653189850736!2d-0.10403987582161978!3d51.49828426208385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1666541568135!5m2!1sen!2suk"
-                width="200"
-                height="175"
-                allowFullScreen=""
-                loading="lazy"
-                title="Firm1"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </Card>
+      <h2>Law Firm Details Page</h2>
+      <h5 className="my-4 lead">
+        The organisations listed below are known to offer Legal Aid services for
+        your kind of case.
+      </h5>
+      <p>
+        Use the contact details below to try to arrange an appointment and/or
+        for them to agree to represent you and your case at court.
+        <br />
+        When you have either found representation, or exhausted the list of
+        contacts click the button at the bottom of the page to complete our
+        pre-court form to support you and your legal counsel to best represent
+        your case in court.
+      </p>
+      <div className="pt-2">
+        {firm}
 
-          <Card className=" mb-4 col-12 col-lg-5 mx-auto">
-            <CardHeader>
-              <Card.Title>Name of Law Firm</Card.Title>
-            </CardHeader>
-            <div className="row g-0">
-              <div className="col-md-6">
-                <Card.Body>
-                  <address>
-                    1 Law Street <br />
-                    Southwark <br />
-                    London <br />
-                    SE1 9IP <br />
-                  </address>
-                  Tel: <a href="tel:0000-000-0000">0121 423 0000</a>
-                </Card.Body>
-              </div>
-              <iframe
-                className="col-md-6"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4425.653189850736!2d-0.10403987582161978!3d51.49828426208385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1666541568135!5m2!1sen!2suk"
-                width="200"
-                height="175"
-                allowFullScreen=""
-                loading="lazy"
-                title="Firm1"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </Card>
+        <div className="text-center">
+          <Link to="/court" role="button" className="m-2 btn btn-info ">
+            Complete Court Form
+          </Link>
         </div>
-        <Link to="/court" role="button" className="m-2 btn btn-info ">
-          Complete Court Form
-        </Link>
       </div>
     </>
   );
