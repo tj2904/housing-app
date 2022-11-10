@@ -56,7 +56,7 @@ export const Navigation = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          HOUSING APP
+          Eviction Support
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
