@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 
 function CourtInfo() {
-  const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
 
   return (
