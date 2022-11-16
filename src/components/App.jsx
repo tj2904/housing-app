@@ -10,12 +10,12 @@ import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <Container className="pt-2">
-      <div className="w-100">
-
-          <Router>
+    
+    
+    <Router>
             {/* Adding nav here means it will show on all pages */}
             <Navigation></Navigation>
+            <Container className="pt-2">
             <Routes>
               <Route path="/court" element={<CourtInfo />} />
               <Route path="/" element={<Home />} />
@@ -23,10 +23,9 @@ function App() {
               <Route path="/details" element={<Details />} />
               <Route path="/eligibility" element={<Eligibility />} />
             </Routes>
+    </Container>
           </Router>
 
-      </div>
-    </Container>
   );
 }
 
