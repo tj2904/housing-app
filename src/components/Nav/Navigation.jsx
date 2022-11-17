@@ -26,7 +26,7 @@ export const Navigation = () => {
           <img
             src={home}
             alt="logo"
-            width="30"
+            width="30"  
             height="30"
             className="d-inline-block align-top"
           />{" "}

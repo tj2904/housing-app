@@ -4,3 +4,38 @@
 .centered-container {
     margin: auto;
 }
+
+.navbar {
+    justify-content: space-around;
+}
+
+.section-1{
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background-image: url('https://cdn.jevelin.shufflehound.com/mobile-app-2/wp-content/uploads/sites/40/2019/11/BG2.jpg?id=226');
+    margin-top: -60px;
+}
+
+.cont-section1 p{
+    font-size: 24px;
+}
+
+.cont-img-section1{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 650px;
+    margin-top: 200px;
+}
+
+.cont-img-section1 img{
+    width: 80%;
+}
+
+@media( max-width : 800px ){
+    .section-1{
+        flex-wrap: wrap;
+    }
+}
