@@ -20,7 +20,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <Navbar bg="" expand="lg">
+    <Navbar className="navbar-dark bg-primary" expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <img
@@ -29,7 +29,7 @@ export const Navigation = () => {
             width="30"
             height="30"
             className="d-inline-block align-top"
-          />{" "} 
+          />{" "}
           EVICTION SUPPORT
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
