@@ -11,7 +11,7 @@ function CourtInfo() {
       <h2>Court Info Questionnaire</h2>
       <div className="lead mb-3">
         Please complete this form ahead of your court date ready to share with
-        your solicitor so they have all of the information they need to best
+        your solicitor or the court, so they have all of the information they need to best
         support you.
       </div>
 
