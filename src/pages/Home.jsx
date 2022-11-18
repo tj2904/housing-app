@@ -1,32 +1,68 @@
-import React, { useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import {Alert } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    // This needs re-doing completely to be the landing/home page that explains the app and it's purpose.
-    // Nearly all of the code below should be deleted and replaced with a cool looking page!
-    /* <h1>Page title</h1>
- <p className="lead">Some intro text here that will grab attention/explain the site...</p>
- <Alert variant="danger">Here we can use this element to add the warning about needing to attend court maybe?</Alert>*/
-    <div>
-      <section className="section-1">
-        <div className="cont-section1">
-          <h1>
-          Eviction Support will help you to check if you are elegible for legal aid for your housing issue.
-          </h1>
-          <p>
-          If you have a court case, Eviction Support will help you to check if you are elegible for legal aid for your housing matter. The website also create a report with your informations so you can download it on your device and take it to your solicitor or to court in case you dont find a solicitor
-          </p>
-          <p>
-          Please note: It is very important that you have your case heard, so DO NOT MISS YOUR COURT DATE. use the websites report to show the Judge/Duty Solicitor on site about your case and have your side heard!
-          </p>
-        </div>
-        <div className="cont-img-section1">
-          <img src="https://mysocialhousing.co.uk/wp-content/uploads/2021/03/5eab1b1d3b34bcd2802fce13_iPhoneX-Mock-Up-MSH-2-p-500.png" />
+    <>
+      <section>
+        {/* my-4 gives us 4 units of margin on the y axis */}
+        <h2 className="my-4">
+          Eviction Support will help you to check if you are elegible for legal
+          aid for your housing issue.
+        </h2>
+        {/* gives us some padding when on smaller screens */}
+        <div className="container-fluid">
+          {/* we set a row so we can arrange columns */}
+          <div className="row ">
+            {/* columns are x parts of 12, so we have a 9 and a 3 */}
+            <p className="col-md-9">
+              If you have a court case for eviction, Tenant's Eviction Support
+              will help you find out if you are elegible for legal aid for your
+              eviction. We will also create a report with your information that
+              you can download onto your device and take it to your solicitor or
+              to court in case you don't find a solicitor before your court
+              date.
+              {/* I added a link as we will need a large call to action */}
+              <Link
+                to="/court"
+                role="button"
+                className="m-2 btn btn-lg btn-primary mt-5"
+              >
+                Complete our Court Form and get ready to present your side...
+              </Link>
+            </p>
+            {/* d-none means display-none and then this is over ridden for sizes above md (medium) 
+                we contain the img in a div to make layouts easier
+                */}
+            <div className="col-md-3 d-none d-md-block">
+              <img
+                src="https://mysocialhousing.co.uk/wp-content/uploads/2021/03/5eab1b1d3b34bcd2802fce13_iPhoneX-Mock-Up-MSH-2-p-500.png"
+                height="300px"
+              />
+            </div>
+
+            {/*   Alert is a bootstrap component. the markup is taken from
+                  https://getbootstrap.com/docs/5.2/components/alerts/#icons 
+                  using an emoji insead of the svg in the example*/}
+            <Alert
+              variant="danger"
+              className="mt-4 mx-6 d-flex align-items-center"
+            >
+              <div className="flex-shrink-0 me-2 fs-2">⚠️</div>
+              <div>
+                Please note: It is very important that you have your case heard,
+                so
+                <strong> DO NOT MISS YOUR COURT DATE</strong>. Use this
+                website's report to show the Judge/Duty Solicitor at court on
+                the day about your case and have your side of the case put
+                across!
+              </div>
+            </Alert>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
