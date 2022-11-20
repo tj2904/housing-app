@@ -1,24 +1,30 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import html2pdf from "html2pdf.js"
 import { Link } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 
 function CourtInfo() {
+  // state to control loading behaviour
+  const [loading, setLoading] = useState(false);
   // pdfDiv is a containing div - everything in it will be in the PDF
   const pdfDiv = useRef();
 
   // Handle the click event on the download button
   const handleDownload = async () => {
+    setLoading(true);
     const element = pdfDiv.current;
 
     // https://github.com/eKoopmans/html2pdf.js#usage
     const opt = {
       margin: 10,
       filename: "TenantEvictionSupport.pdf",
+      pagebreak: { mode: 'avoid-all'},
+      jsPDF: { }
     };
    // html2pdf(element, opt);
 
    html2pdf().set(opt).from(element).save();
+   setLoading(false);
   };
 
   return (
@@ -32,6 +38,9 @@ function CourtInfo() {
       </div>
 
       <div ref={pdfDiv}>
+        <div className="d-none d-print-inline">
+          Printed using Tenant's Eviction Support Website.
+        </div>
         <Form>
           <Form.Group className="mb-3 mt-2" controlId="question1">
             <Form.Label>Queston 1</Form.Label>
@@ -223,6 +232,7 @@ function CourtInfo() {
         </Form>
       </div>
       <Button
+        disabled={loading}
         type="button"
         className="btn btn-success"
         onClick={handleDownload}
