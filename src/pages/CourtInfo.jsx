@@ -32,18 +32,20 @@ function CourtInfo() {
       }
     };
 
-
-
     const pdf = new jsPDF();
     pdf.setLineWidth(15);
-    
+
     const imgProperties = pdf.getImageProperties(data);
-    const pdfWidth = (pdf.internal.pageSize.getWidth() - 15);
+    const pdfWidth = pdf.internal.pageSize.getWidth() - 15;
     const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
 
-    pdf.setTextColor('#00ceff');
+    pdf.setTextColor("#00ceff");
     pdf.setFontSize(16);
-    pdf.text("This report was completed using Tenant's Eviction Support.", 10, 8);
+    pdf.text(
+      "This report was completed using Tenant's Eviction Support.",
+      10,
+      8
+    );
     pdf.addImage(data, "PNG", 10, 15, pdfWidth, pdfHeight);
     addFooters(pdf);
     pdf.save("TenantEvictionSupport.pdf");
@@ -68,14 +70,12 @@ function CourtInfo() {
               Add additional instructions if needed here.
             </Form.Text>
           </Form.Group>
-
           <Form.Group className="mb-3" controlId="question2" required>
             <Form.Label>
               Question 2 <span className="text-danger fs-4">*</span>
             </Form.Label>
             <Form.Control type="text" placeholder="Another short answer" />
           </Form.Group>
-
           <Form.Group className="col-sm-6 mb-3">
             <Form.Label for="question3">
               Pre-defined drop-down list queston
@@ -87,7 +87,6 @@ function CourtInfo() {
               <option value="3">Three</option>
             </Form.Select>
           </Form.Group>
-
           <Form.Group className="mb-3" controlId="question4">
             <Form.Label>Question 4</Form.Label>
             <textarea
@@ -96,6 +95,161 @@ function CourtInfo() {
             />
           </Form.Group>
           {/* <Button className="disabled mt-4">🖨 Print for Court</Button> */}
+          <Form.Group className="mb-3 mt-2" controlId="question1">
+            <Form.Label>Queston 1</Form.Label>
+            <Form.Control type="text" placeholder="Short answer" />
+            <Form.Text className="text-muted">
+              Add additional instructions if needed here.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question2" required>
+            <Form.Label>
+              Question 2 <span className="text-danger fs-4">*</span>
+            </Form.Label>
+            <Form.Control type="text" placeholder="Another short answer" />
+          </Form.Group>
+          <Form.Group className="col-sm-6 mb-3">
+            <Form.Label for="question3">
+              Pre-defined drop-down list queston
+            </Form.Label>
+            <Form.Select className="form-select" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question4">
+            <Form.Label>Question 4</Form.Label>
+            <textarea
+              className="form-control"
+              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </Form.Group>{" "}
+          <Form.Group className="mb-3 mt-2" controlId="question1">
+            <Form.Label>Queston 1</Form.Label>
+            <Form.Control type="text" placeholder="Short answer" />
+            <Form.Text className="text-muted">
+              Add additional instructions if needed here.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question2" required>
+            <Form.Label>
+              Question 2 <span className="text-danger fs-4">*</span>
+            </Form.Label>
+            <Form.Control type="text" placeholder="Another short answer" />
+          </Form.Group>
+          <Form.Group className="col-sm-6 mb-3">
+            <Form.Label for="question3">
+              Pre-defined drop-down list queston
+            </Form.Label>
+            <Form.Select className="form-select" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question4">
+            <Form.Label>Question 4</Form.Label>
+            <textarea
+              className="form-control"
+              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </Form.Group>{" "}
+          <Form.Group className="mb-3 mt-2" controlId="question1">
+            <Form.Label>Queston 1</Form.Label>
+            <Form.Control type="text" placeholder="Short answer" />
+            <Form.Text className="text-muted">
+              Add additional instructions if needed here.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question2" required>
+            <Form.Label>
+              Question 2 <span className="text-danger fs-4">*</span>
+            </Form.Label>
+            <Form.Control type="text" placeholder="Another short answer" />
+          </Form.Group>
+          <Form.Group className="col-sm-6 mb-3">
+            <Form.Label for="question3">
+              Pre-defined drop-down list queston
+            </Form.Label>
+            <Form.Select className="form-select" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question4">
+            <Form.Label>Question 4</Form.Label>
+            <textarea
+              className="form-control"
+              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </Form.Group>{" "}
+          <Form.Group className="mb-3 mt-2" controlId="question1">
+            <Form.Label>Queston 1</Form.Label>
+            <Form.Control type="text" placeholder="Short answer" />
+            <Form.Text className="text-muted">
+              Add additional instructions if needed here.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question2" required>
+            <Form.Label>
+              Question 2 <span className="text-danger fs-4">*</span>
+            </Form.Label>
+            <Form.Control type="text" placeholder="Another short answer" />
+          </Form.Group>
+          <Form.Group className="col-sm-6 mb-3">
+            <Form.Label for="question3">
+              Pre-defined drop-down list queston
+            </Form.Label>
+            <Form.Select className="form-select" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question4">
+            <Form.Label>Question 4</Form.Label>
+            <textarea
+              className="form-control"
+              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </Form.Group>{" "}
+          <Form.Group className="mb-3 mt-2" controlId="question1">
+            <Form.Label>Queston 1</Form.Label>
+            <Form.Control type="text" placeholder="Short answer" />
+            <Form.Text className="text-muted">
+              Add additional instructions if needed here.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question2" required>
+            <Form.Label>
+              Question 2 <span className="text-danger fs-4">*</span>
+            </Form.Label>
+            <Form.Control type="text" placeholder="Another short answer" />
+          </Form.Group>
+          <Form.Group className="col-sm-6 mb-3">
+            <Form.Label for="question3">
+              Pre-defined drop-down list queston
+            </Form.Label>
+            <Form.Select className="form-select" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="question4">
+            <Form.Label>Last Question 4</Form.Label>
+            <textarea
+              className="form-control"
+              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+          </Form.Group>
         </Form>
       </div>
       <Button
