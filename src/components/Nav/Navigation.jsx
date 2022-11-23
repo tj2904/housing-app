@@ -30,13 +30,13 @@ export const Navigation = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          Tenant's Eviction Support
+          Housing Eviction Help
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {menu.map((res) => {
-              return <Nav.Link href={res.link}>{res.title}</Nav.Link>;
+              return <Nav.Link href={res.link} className="nav-link active">{res.title}</Nav.Link>;
             })}
           </Nav>
         </Navbar.Collapse>

@@ -1,16 +1,22 @@
 import React from "react";
-import {Alert } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Section1 } from "../components/Sections/Section1";
 
 function Home() {
   return (
     <>
-      <section>
+
+      <Section1 />
+      <section className="my-4" >
         {/* my-4 gives us 4 units of margin on the y axis */}
-        <h2 className="my-4">
-          Eviction Support will help you to check if you are elegible for legal
-          aid for your housing issue.
-        </h2>
+        <div>
+          <h1 >
+            Eviction Support will help you to check if you are elegible for
+            legal aid for your housing issue.
+          </h1>
+        </div>
+
         {/* gives us some padding when on smaller screens */}
         <div className="container-fluid">
           {/* we set a row so we can arrange columns */}
@@ -37,8 +43,8 @@ function Home() {
                 */}
             <div className="col-md-3 d-none d-md-block">
               <img
-                src="https://mysocialhousing.co.uk/wp-content/uploads/2021/03/5eab1b1d3b34bcd2802fce13_iPhoneX-Mock-Up-MSH-2-p-500.png"
-                height="300px"
+                src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
+                height="500px"
               />
             </div>
 
