@@ -17,7 +17,7 @@ function CourtInfo() {
 
       <Form>
         <Form.Group className="mb-3" controlId="Question1">
-          <Form.Label>"Name:"</Form.Label>
+          <Form.Label>Name:</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
           
         </Form.Group>
@@ -59,7 +59,7 @@ function CourtInfo() {
         </Form.Group>
     
     
-    <Form.Group className="mb-3" controlId="Question8>
+    <Form.Group className="mb-3" controlId="Question8">
           <Form.Label>What is your income per month?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
