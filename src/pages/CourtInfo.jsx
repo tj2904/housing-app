@@ -19,7 +19,7 @@ function CourtInfo() {
         <Form.Group className="mb-3" controlId="Question1">
           <Form.Label>"Name:"</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
-          </Form.Text>
+          
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Question2">
