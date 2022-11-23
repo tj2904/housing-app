@@ -19,7 +19,6 @@ function CourtInfo() {
         <Form.Group className="mb-3" controlId="Question1">
           <Form.Label>Name:</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
-          
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Question2">
@@ -27,49 +26,49 @@ function CourtInfo() {
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-     <Form.Group className="mb-3" controlId="Question3">
+        <Form.Group className="mb-3" controlId="Question3">
           <Form.Label>Email Address</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Question4">
+        <Form.Group className="mb-3" controlId="Question4">
           <Form.Label>Mobile Number:</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Question5">
+       <Form.Group className="mb-3" controlId="Question5">
           <Form.Label>Do you have any dependants?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-     <Form.Group className="mb-3" controlId="Question6">
+        <Form.Group className="mb-3" controlId="Question6">
           <Form.Label>Do you or the people you live with have any significant physical or mental health problems?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
               <Form.Text className="text-muted">
-            Do you have any disability?
-          </Form.Text>
+                 Do you have any disability?
+              </Form.Text>
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Question7">
+       <Form.Group className="mb-3" controlId="Question7">
           <Form.Label>Who is your landlord?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
               <Form.Text className="text-muted">
-            Council, Private landord, other...
-          </Form.Text>
+                 Council, Private landord, other...
+              </Form.Text>
         </Form.Group>
     
     
-    <Form.Group className="mb-3" controlId="Question8">
+      <Form.Group className="mb-3" controlId="Question8">
           <Form.Label>What is your income per month?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Question9">
+       <Form.Group className="mb-3" controlId="Question9">
           <Form.Label>Do you receive any benefit?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Question10">
+       <Form.Group className="mb-3" controlId="Question10">
           <Form.Label>How much rent do you owe?</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
@@ -102,9 +101,6 @@ function CourtInfo() {
           </Form.Text>
         </Form.Group>
 
-
-
-        </Form.Group>
         <Button className="disabled mt-4">🖨 Print for Court</Button>
       </Form>
     </>
