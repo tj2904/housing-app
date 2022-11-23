@@ -16,89 +16,87 @@ function CourtInfo() {
       </div>
 
       <Form>
-        <Form.Group className="mb-3" controlId="Name:" required>
-          <Form.Label>Question 1<span className="text-danger fs-4">*</span></Form.Label>
+        <Form.Group className="mb-3" controlId="Question1">
+          <Form.Label>"Name:"</Form.Label>
           <Form.Control type="text" placeholder="Short answer" />
-          <Form.Text className="text-muted">
-            Add additional instructions if needed here.
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="Address:" required>
-          <Form.Label>Question 2 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+        <Form.Group className="mb-3" controlId="Question2">
+          <Form.Label>Address:</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-     <Form.Group className="mb-3" controlId="Email Address:" required>
-          <Form.Label>Question 3 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+     <Form.Group className="mb-3" controlId="Question3">
+          <Form.Label>Email Address</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Mobile Number:" required>
-          <Form.Label>Question 4 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+    <Form.Group className="mb-3" controlId="Question4">
+          <Form.Label>Mobile Number:</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Do you have any dependants?" required>
-          <Form.Label>Question 5 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+    <Form.Group className="mb-3" controlId="Question5">
+          <Form.Label>Do you have any dependants?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
         </Form.Group>
     
-     <Form.Group className="mb-3" controlId="Do you or the people you live with have any significant physical or mental health problems?" required>
-          <Form.Label>Question 6 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+     <Form.Group className="mb-3" controlId="Question6">
+          <Form.Label>Do you or the people you live with have any significant physical or mental health problems?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
               <Form.Text className="text-muted">
             Do you have any disability?
           </Form.Text>
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Who is your landlord?">
-          <Form.Label>Question 7 </Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+    <Form.Group className="mb-3" controlId="Question7">
+          <Form.Label>Who is your landlord?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
               <Form.Text className="text-muted">
             Council, Private landord, other...
           </Form.Text>
         </Form.Group>
     
     
-    <Form.Group className="mb-3" controlId="What is your income per month?" required>
-          <Form.Label>Question 8 <span className="text-danger fs-4">*</span></Form.Label>
+    <Form.Group className="mb-3" controlId="Question8>
+          <Form.Label>What is your income per month?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+    <Form.Group className="mb-3" controlId="Question9">
+          <Form.Label>Do you receive any benefit?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+    <Form.Group className="mb-3" controlId="Question10">
+          <Form.Label>How much rent do you owe?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+      <Form.Group className="mb-3" controlId="Question11">
+          <Form.Label>How much rent do they claim you owe?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+      <Form.Group className="mb-3" controlId="Question12">
+          <Form.Label>Do you have any other debts?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+      <Form.Group className="mb-3" controlId="Question13">
+          <Form.Label>What is your plan to clear out your debt?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
+        </Form.Group>
+    
+      <Form.Group className="mb-3" controlId="Question14">
+          <Form.Label>Is there any disrepair to your home?</Form.Label>
           <Form.Control type="text" placeholder="Another short answer" />
         </Form.Group>
     
-    <Form.Group className="mb-3" controlId="Do you receive any benefit?" required>
-          <Form.Label>Question 9 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-    <Form.Group className="mb-3" controlId="How much rent do you owe?">
-          <Form.Label>Question 10 </Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="How much rent do they claim you owe?">
-          <Form.Label>Question 11 </Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="Do you have any other debts?" required>
-          <Form.Label>Question 12 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="What is your plan to clear out your debt?" required>
-          <Form.Label>Question 13 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="Is there any disrepair to your home?" required>
-          <Form.Label>Question 14 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
-        </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="Do you have any deadlines?" required>
-          <Form.Label>Question 15 <span className="text-danger fs-4">*</span></Form.Label>
-          <Form.Control type="text" placeholder="Another short answer" />
+      <Form.Group className="mb-3" controlId="Question15">
+          <Form.Label>Do you have any deadlines?</Form.Label>
+          <Form.Control type="text" placeholder="Short answer" />
               <Form.Text className="text-muted">
             Court Dates, response to be given to Court/Council.
           </Form.Text>
