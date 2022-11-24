@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const Section1 = () => {
@@ -25,22 +24,18 @@ export const Section1 = () => {
           </div>
 
           <Link to="/court">
-            <button type="button" class="btn btn-primary btn-lg">
+            <button type="button" class="btn btn-primary btn-lg mt-4">
               Click Here
             </button>
           </Link>
         </div>
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
-          <img
-                src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
-                width="100%"
-              />
+            <img
+              src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
+              width="100%"
+            />
           </div>
-          {/* <img
-            src="https://housing.az.ov/sites/default/files/Eviction%20Prevention.png"
-            height="500px"
-  />*/}
         </div>
       </div>
     </div>
