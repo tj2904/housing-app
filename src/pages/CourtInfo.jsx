@@ -1,52 +1,29 @@
-import React, { useRef } from "react";
-import html2canvas from "html2canvas";
-import { jsPDF } from "jspdf";
-import { Link } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
+import React, { useRef, useState } from "react";
+import html2pdf from "html2pdf.js";
+import { Button, Form, Alert } from "react-bootstrap";
 
 function CourtInfo() {
+  // state to regulate active state of button
+  const [downloaded, setDownloaded] = useState(true);
+
   // pdfDiv is a containing div - everything in it will be in the PDF
   const pdfDiv = useRef();
 
   // Handle the click event on the download button
   const handleDownload = async () => {
     const element = pdfDiv.current;
-    const canvas = await html2canvas(element);
-    const data = canvas.toDataURL("image/png");
 
-    const addFooters = (doc) => {
-      const pageCount = doc.internal.getNumberOfPages();
-
-      doc.setFont("helvetica", "italic");
-      doc.setFontSize(8);
-      for (var i = 1; i <= pageCount; i++) {
-        doc.setPage(i);
-        doc.text(
-          "Page " + String(i) + " of " + String(pageCount),
-          doc.internal.pageSize.width / 2,
-          287,
-          {
-            align: "center",
-          }
-        );
-      }
+    // https://github.com/eKoopmans/html2pdf.js#usage
+    const opt = {
+      margin: 10,
+      filename: "TenantEvictionSupport.pdf",
+      pagebreak: { mode: "avoid-all" },
+      jsPDF: {},
     };
+    // html2pdf(element, opt);
 
-
-
-    const pdf = new jsPDF();
-    pdf.setLineWidth(15);
-    
-    const imgProperties = pdf.getImageProperties(data);
-    const pdfWidth = (pdf.internal.pageSize.getWidth() - 15);
-    const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
-
-    pdf.setTextColor('#00ceff');
-    pdf.setFontSize(16);
-    pdf.text("This report was completed using Tenant's Eviction Support.", 10, 8);
-    pdf.addImage(data, "PNG", 10, 15, pdfWidth, pdfHeight);
-    addFooters(pdf);
-    pdf.save("TenantEvictionSupport.pdf");
+    html2pdf().set(opt).from(element).save();
+    setDownloaded(false);
   };
 
   return (
@@ -61,53 +38,95 @@ function CourtInfo() {
 
       <div ref={pdfDiv}>
         <Form>
-          <Form.Group className="mb-3 mt-2" controlId="question1">
-            <Form.Label>Queston 1</Form.Label>
-            <Form.Control type="text" placeholder="Short answer" />
-            <Form.Text className="text-muted">
-              Add additional instructions if needed here.
-            </Form.Text>
+          <Form.Group className="mb-3" controlId="formquestion1">
+            <Form.Label>Who is your landlord? </Form.Label>
+            <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="question2" required>
+          <Form.Group className="mb-3" controlId="formquestion2">
+            <Form.Label>How long have lived there? </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formquestion6">
+            <Form.Label>How much rent do they say you owe? </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formquestion8">
+            <Form.Label>Is there anything wrong with the property? </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formquestion3">
+            <Form.Label>How many children do you have? </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formquestion5">
             <Form.Label>
-              Question 2 <span className="text-danger fs-4">*</span>
+              Have you got any children with learning difficulties?
             </Form.Label>
-            <Form.Control type="text" placeholder="Another short answer" />
+            <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="col-sm-6 mb-3">
-            <Form.Label for="question3">
-              Pre-defined drop-down list queston
-            </Form.Label>
-            <Form.Select className="form-select" id="question3">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
+          {/* <Form.Group className="mb-3" controlId="formquestion7">
+            <Form.Label>Is your children mentally affected? </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group> */}
+
+          <Form.Group className="mb-3" controlId="formquestion4">
+            <Form.Label>Do you live with your partner? </Form.Label>
+            <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="question4">
-            <Form.Label>Question 4</Form.Label>
-            <textarea
-              className="form-control"
-              placeholder="Longer form answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            />
+          <Form.Group className="mb-3" controlId="formquestion9">
+            <Form.Label>Do you have a proposal to reduce your risk?</Form.Label>
+            <Form.Control type="text " />
           </Form.Group>
-          {/* <Button className="disabled mt-4">🖨 Print for Court</Button> */}
+
+          <Form.Group className="mb-3" controlId="formquestion10">
+            <Form.Label>
+              What plan do you have to repay the arrears?{" "}
+            </Form.Label>
+            <Form.Control type="text " />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formquestion11">
+            <Form.Label>
+              Provide brief summary of the issue(s) you are facing?
+            </Form.Label>
+            <textarea type="text " className="form-control" />
+          </Form.Group>
         </Form>
       </div>
-      <Button
-        type="button"
-        className="btn btn-success"
-        onClick={handleDownload}
-      >
-        💾 📄 Download as a PDF
-      </Button>
-      <Link to="/" role="button" className="m-4 btn btn-warning ">
-        I've downloaded the form
-      </Link>
+      <div className="">
+        <Button
+          type="button"
+          className="btn btn-success m-2"
+          onClick={handleDownload}
+        >
+          💾 📄 Download as a PDF
+        </Button>
+        <Button
+          disabled={downloaded}
+          href="/eligibility"
+          role="button"
+          variant={"warning"}
+          className=" m-2"
+        >
+          I've downloaded the form
+        </Button>
+      </div>
+      <Alert variant="danger" className="mt-4 mx-6 d-flex align-items-center">
+        <div className="flex-shrink-0 me-2 fs-2">⚠️</div>
+        <div>
+          Please note: It is very important that you have your case heard, so
+          <strong> DO NOT MISS YOUR COURT DATE</strong>. Use this website's
+          report to show the Judge/Duty Solicitor at court on the day about your
+          case and have your side of the case put across!
+        </div>
+      </Alert>
     </>
   );
 }
