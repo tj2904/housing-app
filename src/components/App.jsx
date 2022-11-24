@@ -10,22 +10,22 @@ import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    
-    
     <Router>
-            {/* Adding nav here means it will show on all pages */}
-            <Navigation></Navigation>
-            <Container className="pt-2">
-            <Routes>
-              <Route path="/court" element={<CourtInfo />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/details" element={<Details />} />
-              <Route path="/eligibility" element={<Eligibility />} />
-            </Routes>
-    </Container>
-          </Router>
-
+      {/* Adding nav here means it will show on all pages */}
+      <Navigation />
+      {/* I reinstated the <Container> as this is a bootstrap component that centers the content 
+          on the page (for large screens this is important) and gives us some responsiveness - 
+          https://react-bootstrap.github.io/layout/grid/#container  */}
+      <Container>
+        <Routes>
+          <Route path="/court" element={<CourtInfo />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/eligibility" element={<Eligibility />} />
+        </Routes>
+      </Container>
+    </Router>
   );
 }
 
