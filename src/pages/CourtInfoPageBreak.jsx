@@ -6,8 +6,12 @@ import { Button, Form } from "react-bootstrap";
 function CourtInfo() {
   // state to control loading behaviour
   const [loading, setLoading] = useState(false);
+  // state to control the state of the button to move away from the page
+  const [notDownloaded, setNotDownloaded] = useState(true);
+
   // pdfDiv is a containing div - everything in it will be in the PDF
   const pdfDiv = useRef();
+
 
   // Handle the click event on the download button
   const handleDownload = async () => {
@@ -24,6 +28,7 @@ function CourtInfo() {
    // html2pdf(element, opt);
 
    html2pdf().set(opt).from(element).save();
+   setNotDownloaded(false);
    setLoading(false);
   };
 
@@ -239,9 +244,15 @@ function CourtInfo() {
       >
         💾 📄 Download as a PDF
       </Button>
-      <Link to="/" role="button" className="m-4 btn btn-warning ">
-        I've downloaded the form
-      </Link>
+      <Button
+      // only make clickable when the user has downloaded (or at least clicked) on the download button
+        disabled={notDownloaded}
+        href="/"
+        role="button"
+        className="m-4 btn btn-warning "
+      >
+        I've downloaded my form
+      </Button>
     </>
   );
 }
