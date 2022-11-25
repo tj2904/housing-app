@@ -20,7 +20,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <Navbar className="navbar-dark bg-primary" expand="lg">
+    <Navbar className="navbar-dark bg-primary mb-4" expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <img
