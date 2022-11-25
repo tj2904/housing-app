@@ -117,7 +117,7 @@ function CourtInfo() {
           I've downloaded the form
         </Button>
       </div>
-      <Alert variant="danger" className="mt-4 mx-6 d-flex align-items-center">
+      <Alert variant="danger" className="my-4 mx-6 d-flex align-items-center">
         <div className="flex-shrink-0 me-2 fs-2">⚠️</div>
         <div>
           Please note: It is very important that you have your case heard, so
