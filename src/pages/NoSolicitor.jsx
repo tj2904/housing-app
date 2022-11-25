@@ -5,7 +5,7 @@ export default function NoSolicitor() {
   return (
     <>
       <div>
-        <h1>I Have Not Found A Solicitor</h1>
+        <h1>If You Have Not Found A Solicitor...</h1>
         <p className="lead">
           Even though you have not found a Solicitor you should still attend
           your court date.
