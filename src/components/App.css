@@ -1,6 +1,32 @@
 /* Styles here are avaliable globally */
 
+#root {
+/*background-image: url('https://cdn.jevelin.shufflehound.com/mobile-app-2/wp-content/uploads/sites/40/2019/11/BG2.jpg?id=226');*/
+height: 100vh;
+}
+
 /* Utility class to do exactly that */
 .centered-container {
     margin: auto;
+}
+
+/*  
+    Note that anything added/changed here applies to every page/view on the site, page specific css should be in its own file.
+
+    I deleted the styles you had added here as most of it could be accomplished in Bootstrap, which keeps things simpler.
+    Note also that I returned the <Container> to the index.jsx as this helps with responsiveness and centering content.
+    THe #root rule is there to add the background image to the page, remember this is now on every page, the height: 100vh 
+    ensures the background fills the height of the screen (100 % of the Viewport Height)
+*/
+
+.cont-img-pri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-img-sec1{
+    margin-top: 20px;
+    width: 400px;
+    height: 335px;
 }

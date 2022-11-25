@@ -35,7 +35,6 @@ function CourtInfo() {
         your solicitor or the court, so they have all of the information they
         need to best support you.
       </div>
-
       <div ref={pdfDiv}>
         <Form>
           <Form.Group className="mb-3" controlId="formquestion1">
