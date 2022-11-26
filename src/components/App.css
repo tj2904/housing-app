@@ -2,7 +2,7 @@
 
 #root {
 /*background-image: url('https://cdn.jevelin.shufflehound.com/mobile-app-2/wp-content/uploads/sites/40/2019/11/BG2.jpg?id=226');*/
-height: 100vh;
+min-height: 100vh;
 }
 
 /* Utility class to do exactly that */
