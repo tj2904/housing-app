@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import EVICTION from "../../img/EVICTION.png";
 
 export const Section1 = () => {
   return (
@@ -19,7 +20,7 @@ export const Section1 = () => {
             to court in case you don't find a solicitor before your court date.
           </p>
           <div>
-            <strong>
+            <strong className="strong">
               Complete our Court Form and get ready to present your side...
             </strong>
           </div>
@@ -32,15 +33,8 @@ export const Section1 = () => {
         </div>
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
-          <img
-                src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
-                width="100%"
-              />
+            <img src={EVICTION} />
           </div>
-          {/* <img
-            src="https://housing.az.ov/sites/default/files/Eviction%20Prevention.png"
-            height="500px"
-  />*/}
         </div>
       </div>
     </div>

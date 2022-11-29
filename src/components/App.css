@@ -23,10 +23,30 @@ height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 200px;
 }
 
 .cont-img-sec1{
-    margin-top: 20px;
     width: 400px;
-    height: 335px;
+    height: 385px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cont-img-sec1 img{
+    width: 100%;
+}
+
+.row{
+    margin-bottom: 100px;
+    margin-top: 59px !important;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.strong{
+    font-size: 18px;
 }
