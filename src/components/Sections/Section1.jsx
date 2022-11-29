@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import EVICTION from "../../img/EVICTION.png";
 
@@ -26,14 +25,17 @@ export const Section1 = () => {
           </div>
 
           <Link to="/court">
-            <button type="button" class="btn btn-primary btn-lg">
+            <button type="button" class="btn btn-primary btn-lg mt-4">
               Click Here
             </button>
           </Link>
         </div>
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
-            <img src={EVICTION} />
+            <img
+              src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
+              width="100%"
+            />
           </div>
         </div>
       </div>
