@@ -28,17 +28,31 @@ function Eligibility() {
         If you do not qualify for Legal Aid, then you should take the form you
         have just downloaded with you on your court date.
       </p>
-      <a href="https://www.gov.uk/check-legal-aid">
-        <img src={checkScreen} className="fluid m-2 img-thumbnail" />
+      <a
+        href="https://www.gov.uk/check-legal-aid"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src={checkScreen}
+          className="fluid m-2 img-thumbnail"
+          alt="screenshot of the government eligibility check"
+        />
       </a>
-      <img
-        src="https://via.placeholder.com/300x200?text=You_Are_Not_Eligible"
-        className="fluid m-2"
-      />
-      <img
-        src="https://via.placeholder.com/300x200?text=You_Are_Eligible_screen"
-        className="fluid m-2"
-      />
+      <a href="#" target="_blank" rel="noreferrer">
+        <img
+          src="https://via.placeholder.com/300x200?text=You_Are_Not_Eligible"
+          className="fluid m-2"
+          alt="alt text"
+        />
+      </a>
+      <a href="#" target="_blank" rel="noreferrer">
+        <img
+          src="https://via.placeholder.com/300x200?text=You_Are_Eligible_screen"
+          className="fluid m-2"
+          alt="alt text"
+        />
+      </a>
       {/* 
       This approach doesn't work
       
@@ -55,6 +69,7 @@ function Eligibility() {
           role="button"
           className="m-2 btn btn-dark"
           target="_blank"
+          rel="noreferrer"
         >
           Check if you are eligible for Legal Aid
         </a>
