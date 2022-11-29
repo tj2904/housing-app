@@ -18,7 +18,7 @@ function App() {
       {/* I reinstated the <Container> as this is a bootstrap component that centers the content 
           on the page (for large screens this is important) and gives us some responsiveness - 
           https://react-bootstrap.github.io/layout/grid/#container  */}
-      <Container>
+      <Container className="mb-6">
         <Routes>
           <Route path="/court" element={<CourtInfo />} />
           <Route path="/" element={<Home />} />
