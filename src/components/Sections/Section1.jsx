@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import EVICTION from "../../img/EVICTION.png";
+import House from "../../img/House.png";
 
 export const Section1 = () => {
   return (
@@ -33,7 +33,7 @@ export const Section1 = () => {
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
             <img
-              src="https://housing.az.gov/sites/default/files/Eviction%20Prevention.png"
+              src={House}
               width="100%"
             />
           </div>

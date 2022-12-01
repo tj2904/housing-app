@@ -23,11 +23,11 @@ height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 198px;
 }
 
 .cont-img-sec1{
-    width: 400px;
+    width: 423px;
     height: 385px;
     border-radius: 20px;
     overflow: hidden;
@@ -45,7 +45,7 @@ height: 100vh;
 .col{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 22px;
 }
 .strong{
     font-size: 18px;
