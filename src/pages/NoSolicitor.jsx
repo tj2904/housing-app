@@ -18,6 +18,7 @@ export default function NoSolicitor() {
         <div className="text-center ">
           <iframe
             className="col-md-6"
+            height="300px"
             allowFullScreen=""
             src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.422077134202!2d-0.08445678401380904!3d51.50547207963484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603501fe15bed%3A0xf4c1de79633c7099!2sSouthwark%20Crown%20Court!5e0!3m2!1sen!2suk!4v1669891620945!5m2!1sen!2suk"
             loading="lazy"
