@@ -4,14 +4,14 @@ import House from "../../img/House.png";
 
 export const Section1 = () => {
   return (
-    <div>
+    <div className="mt-4">
       <div class="row">
-        <div class="col ">
+        <div class="col">
           <h1>
             Eviction Support will help you to check if you are elegible for
             legal aid for your housing issue.
           </h1>
-          <p className="col-md-9">
+          <p>
             If you have a court case for eviction, Tenant's Eviction Support
             will help you find out if you are elegible for legal aid for your
             eviction. We will also create a report with your information that
@@ -35,6 +35,7 @@ export const Section1 = () => {
             <img
               src={House}
               width="100%"
+              className="img-fluid"
             />
           </div>
         </div>
