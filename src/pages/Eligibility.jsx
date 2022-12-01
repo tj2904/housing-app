@@ -42,14 +42,14 @@ function Eligibility() {
             alt="screenshot of the government eligibility check"
           />
         </a>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href="/nosolicitor">
           <img
             src={outcomeNo}
             className="fluid m-2 img-thumbnail"
             alt="alt text"
           />
         </a>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href="/details">
           <img
             src={outcomeYes}
             className="fluid m-2 img-thumbnail"
@@ -57,16 +57,7 @@ function Eligibility() {
           />
         </a>
       </div>
-      {/* 
-      This approach doesn't work
-      
-      <iframe
-        src="https://www.gov.uk/check-legal-aid"
-        width={1000}
-        height={500}
-        sandbox="allow-scripts allow-modal allow-same-origin"
-      ></iframe> */}
-
+{/*
       <div>
         <a
           href="https://www.gov.uk/check-legal-aid"
@@ -81,7 +72,8 @@ function Eligibility() {
           See Details of Solicitors
         </Link>
       </div>
-    </>
+*/}
+</>
   );
 }
 
