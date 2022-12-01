@@ -26,7 +26,16 @@ min-height: 100vh;
 }
 
 .cont-img-sec1{
-    margin-top: 20px;
-    width: 400px;
-    height: 335px;
+    width: 423px;
+    height: 385px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cont-img-sec1 img{
+    width: 100%;
+}
+
+.strong{
+    font-size: 18px;
 }
