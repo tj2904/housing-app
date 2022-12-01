@@ -15,11 +15,15 @@ export default function NoSolicitor() {
           solicitor when you meet them atcourt. This will help you give them all
           the details that they need to support you.
         </p>
-        <div className="text-center">
-          <img
-            src="https://via.placeholder.com/300x200?text=Map_Of_Court_Location"
-            className="fluid m-2"
-          />
+        <div className="text-center ">
+          <iframe
+            className="col-md-6"
+            allowFullScreen=""
+            src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.422077134202!2d-0.08445678401380904!3d51.50547207963484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603501fe15bed%3A0xf4c1de79633c7099!2sSouthwark%20Crown%20Court!5e0!3m2!1sen!2suk!4v1669891620945!5m2!1sen!2suk"
+            loading="lazy"
+            title="CourtMap"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       <Alert variant="danger" className="mt-4 mx-6 d-flex align-items-center">
