@@ -9,8 +9,6 @@ function Eligibility() {
     <>
       <h2>Legal Aid Eligibility</h2>
 
-      {/* Add the redirect to the gov.uk form here - maybe an iframe? */}
-
       <p className="lead">
         Please check if you qualify for Legal Aid using the government site:
       </p>
@@ -20,7 +18,6 @@ function Eligibility() {
         should see first.
       </p>
       <p>
-        {" "}
         Once you have completed the Government's eligibility check, come back to
         this page and select the image that matches your outcome. If you may
         quality for Legal Aid, then we will provide you with a list of
