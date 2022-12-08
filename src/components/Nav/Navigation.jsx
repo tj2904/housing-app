@@ -14,7 +14,7 @@ export const Navigation = () => {
     //{ title: "Home", link: "/" },
     // { title: "About", link: "/" },
     { title: "Eligibility", link: "/eligibility" },
-    { title: "Solicitor Info", link: "/details" },
+    { title: "Solicitor Information", link: "/details" },
     { title: "Court Form", link: "/court" },
     // { title: "Contact", link: "/" },
   ];
@@ -30,7 +30,7 @@ export const Navigation = () => {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          Housing Eviction Help
+          Eviction Prevention
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -8,15 +8,15 @@ export const Section1 = () => {
       <div class="row">
         <div class="col">
           <h1>
-            Eviction Support will help you to check if you are elegible for
-            legal aid for your housing issue.
+            Eviction Prevention will help you to check if you are eligible for
+            Legal Aid to help stop your eviction.
           </h1>
           <p>
-            If you have a court case for eviction, Tenant's Eviction Support
-            will help you find out if you are elegible for legal aid for your
-            eviction. We will also create a report with your information that
-            you can download onto your device and take it to your solicitor or
-            to court in case you don't find a solicitor before your court date.
+            If you have a court case for eviction, Eviction Prevention will help
+            you find out if you are eligible for Legal Aid to help avoid being
+            evicted. We will also create a report with your information that you
+            can download onto your device and take it to your solicitor or to
+            court in case you don't find a solicitor before your court date.
           </p>
           <div>
             <strong className="strong">
@@ -32,11 +32,7 @@ export const Section1 = () => {
         </div>
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
-            <img
-              src={House}
-              width="100%"
-              className="img-fluid"
-            />
+            <img src={House} width="100%" className="img-fluid" />
           </div>
         </div>
       </div>
