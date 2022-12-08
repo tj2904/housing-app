@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import html2pdf from "html2pdf.js";
 import { Button, Form, Alert } from "react-bootstrap";
+import AlertAttendCourt from "../components/AlertAttendCourt";
 
 function CourtInfo() {
   // state to regulate active state of button
@@ -115,15 +116,7 @@ function CourtInfo() {
           I've downloaded the form
         </Button>
       </div>
-      <Alert variant="danger" className="my-4 mx-6 d-flex align-items-center">
-        <div className="flex-shrink-0 me-2 fs-2">⚠️</div>
-        <div>
-          Please note: It is very important that you have your case heard, so
-          <strong> DO NOT MISS YOUR COURT DATE</strong>. Use this website's
-          report to show the Judge/Duty Solicitor at court on the day about your
-          case and have your side of the case put across!
-        </div>
-      </Alert>
+      <AlertAttendCourt />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import SolicitorCard from "../components/SolicitorCard";
 import data from "../data/housing-solicitors";
+import AlertAttendCourt from "../components/AlertAttendCourt";
 
 export default function Details() {
   // Here we map through all of the firms in the list
@@ -31,7 +32,11 @@ export default function Details() {
         {firm}
 
         <div className="text-center">
-          <Link to="/hassolicitor" role="button" className="m-2 btn btn-success ">
+          <Link
+            to="/hassolicitor"
+            role="button"
+            className="m-2 btn btn-success "
+          >
             I have found a solicitor to represent me
           </Link>
           <Link to="/nosolicitor" role="button" className="m-2 btn btn-danger ">
@@ -39,15 +44,7 @@ export default function Details() {
           </Link>
         </div>
 
-        <Alert variant="danger" className="mt-4 mb-6 mx-6 d-flex align-items-center">
-          <div className="flex-shrink-0 me-2 fs-2">⚠️</div>
-          <div>
-            Please note: It is very important that you have your case heard, so
-            <strong> DO NOT MISS YOUR COURT DATE</strong>. Use this website's
-            report to show the Judge/Duty Solicitor at court on the day about
-            your case and have your side of the case put across!
-          </div>
-        </Alert>
+        <AlertAttendCourt />
       </div>
     </>
   );
