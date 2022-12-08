@@ -3,6 +3,7 @@ import { Card, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import checkScreen from "../img/legalAidCheckScreen.png";
 import outcomeNo from "../img/outcomeNo.png";
+import cla from "../img/CLA-small.png";
 import outcomeYes from "../img/outcomeYes.png";
 
 function Eligibility() {
@@ -58,7 +59,7 @@ function Eligibility() {
               <Link to="/details">
                 <Card.Body>
                   <img
-                    src={outcomeYes}
+                    src={cla}
                     className="fluid m-2 img-thumbnail"
                     alt="screenshot of the government eligibility check"
                   />
