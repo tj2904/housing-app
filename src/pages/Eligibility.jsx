@@ -34,7 +34,7 @@ function Eligibility() {
                   alt="screenshot of the government eligibility check"
                 />
               </Card.Body>
-              <Card.Footer>Check Eligibity</Card.Footer>
+              <Card.Footer>Check Your Eligibity</Card.Footer>
             </a>
           </Card>
         </div>
