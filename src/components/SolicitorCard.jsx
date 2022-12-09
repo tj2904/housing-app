@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 
 export default function  SolicitorCard(firm) {
 
