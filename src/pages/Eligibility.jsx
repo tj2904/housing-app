@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import checkScreen from "../img/legalAidCheckScreen.png";
@@ -24,7 +24,7 @@ function Eligibility() {
         have just downloaded with you on your court date.
       </p>
       <div className="row justify-content-center row-cols-1 row-cols-md-3 mb-3 text-center">
-        <div className="col ">
+        <div className="col lg-w-50">
           <Card className="">
             <a href="https://www.gov.uk/check-legal-aid" target="blank">
               <Card.Body>
@@ -40,7 +40,7 @@ function Eligibility() {
         </div>
       </div>
       <div className="row justify-content-center row-cols-1 row-cols-md-3 mb-3 text-center">
-        <div className="col">
+        <div className="col lg-w-50">
           <Card className="mb-2">
             <Link to="/noSolicitor">
               <Card.Body className="">
@@ -56,7 +56,7 @@ function Eligibility() {
             </Link>
           </Card>
         </div>
-        <div className="col">
+        <div className="col lg-w-50">
           <Card>
             <Link to="/details">
               <Card.Body>
@@ -73,22 +73,6 @@ function Eligibility() {
           </Card>
         </div>
       </div>
-      {/*
-      <div>
-        <a
-          href="https://www.gov.uk/check-legal-aid"
-          role="button"
-          className="m-2 btn btn-dark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Check if you are eligible for Legal Aid
-        </a>
-        <Link to="/details" role="button" className="m-2 btn btn-info">
-          See Details of Solicitors
-        </Link>
-      </div>
-*/}
     </>
   );
 }

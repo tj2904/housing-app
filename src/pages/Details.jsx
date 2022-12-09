@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Alert } from "react-bootstrap";
 import SolicitorCard from "../components/SolicitorCard";
 import data from "../data/housing-solicitors";
 import AlertAttendCourt from "../components/AlertAttendCourt";
@@ -43,7 +42,6 @@ export default function Details() {
             I was not able to find a solicitor to represent me
           </Link>
         </div>
-
         <AlertAttendCourt />
       </div>
     </>
