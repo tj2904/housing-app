@@ -1,6 +1,5 @@
 # Getting Started with the Housing App
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) is a requirement for this project, and is avaliable to Windows (incl. WSL2), Mac & Linux.
 
 Clone the repo locally and run `npm install` in install all of the required dependencies.
@@ -10,19 +9,16 @@ Clone the repo locally and run `npm install` in install all of the required depe
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-`npm test` runs tests against the code base and should be completed before each PR locally. They will be run as part of the Github PR workflow too.
-
 <details>
 <summary>Available Scripts</summary>
 
 In the project directory, you can run:
 
-
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These should be run locally before creating a PR, they will be run by a Github action on each PR too.
 
 ### `npm run build`
 
