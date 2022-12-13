@@ -5,8 +5,8 @@ import House from "../../img/House.png";
 export const Section1 = () => {
   return (
     <div className="mt-4">
-      <div class="row">
-        <div class="col">
+      <div className="row">
+        <div className="col">
           <h1>
             Eviction Prevention will help you to check if you are eligible for
             Legal Aid to help stop your eviction.
@@ -25,12 +25,14 @@ export const Section1 = () => {
           </div>
 
           <Link to="/court">
-            <button type="button" class="btn btn-primary btn-lg mt-4">Click Here</button>
+            <button type="button" className="btn btn-primary btn-lg mt-4">
+              Click Here
+            </button>
           </Link>
         </div>
-        <div class="col cont-img-pri">
+        <div className="col cont-img-pri">
           <div className="cont-img-sec1">
-            <img src={House} width="100%" className="img-fluid" alt="logo"/>
+            <img src={House} width="100%" className="img-fluid" alt="logo" />
           </div>
         </div>
       </div>
