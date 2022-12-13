@@ -5,7 +5,8 @@ export default function SolicitorCard(firm) {
 
   return (
     // This uses react bootstrap components to build the card.
-    <Card key={firm.id} className=" mb-4 col-12 col-lg-8 mx-auto">
+    <Card key={firm.id} className=" mb-4 col-12 col-lg-8 mx-auto" data-test="card">
+
       <Card.Header>
         <Card.Title className="mb-0">{firm.Firm}</Card.Title>
       </Card.Header>
