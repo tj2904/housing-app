@@ -37,27 +37,27 @@ function CourtInfo() {
       </div>
       <div ref={pdfDiv}>
         <Form>
-          <Form.Group className="mb-3" controlId="formquestion5">
+          <Form.Group className="mb-3" controlId="formquestion1">
             <Form.Label>Your name:</Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion1">
+          <Form.Group className="mb-3" controlId="formquestion2">
             <Form.Label>Who is your landlord? </Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion2">
+          <Form.Group className="mb-3" controlId="formquestion3">
             <Form.Label>How long have lived there? </Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion6">
+          <Form.Group className="mb-3" controlId="formquestion4">
             <Form.Label>How much rent do they say you owe? </Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion4">
+          <Form.Group className="mb-3" controlId="formquestion5">
             <Form.Label>Does anyone else live in the property? </Form.Label>
             <Form.Control type="text " />
           </Form.Group>
@@ -67,24 +67,24 @@ function CourtInfo() {
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion4">
+          <Form.Group className="mb-3" controlId="formquestion7">
             <Form.Label>
               Do you or anyone you live with have any health problems?{" "}
             </Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion9">
+          <Form.Group className="mb-3" controlId="formquestion8">
             <Form.Label>Do you have a proposal to reduce your risk?</Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion10">
+          <Form.Group className="mb-3" controlId="formquestion9">
             <Form.Label>What plan do you have to repay the arrears?</Form.Label>
             <Form.Control type="text " />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formquestion8">
+          <Form.Group className="mb-3" controlId="formquestion10">
             <Form.Label>Is there anything wrong with the property? </Form.Label>
             <Form.Control type="text " />
           </Form.Group>

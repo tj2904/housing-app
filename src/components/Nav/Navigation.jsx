@@ -11,13 +11,18 @@ export const Navigation = () => {
   ];
 
   return (
-    <Navbar className="navbar-dark bg-primary mb-4" expand="lg">
+    <Navbar
+      className="navbar-dark bg-primary mb-4"
+      expand="lg"
+      role="navigation"
+      aria-label="Main"
+    >
       <Container>
         <Navbar.Brand href="/">
           <img
             src={home}
-            alt="logo"
-            width="30"  
+            alt="site-logo"
+            width="30"
             height="30"
             className="d-inline-block align-top"
           />{" "}
@@ -27,7 +32,15 @@ export const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {menu.map((res) => {
-              return <Nav.Link href={res.link} key={res.title} className="nav-link active">{res.title}</Nav.Link>;
+              return (
+                <Nav.Link
+                  href={res.link}
+                  key={res.title}
+                  className="nav-link active"
+                >
+                  {res.title}
+                </Nav.Link>
+              );
             })}
           </Nav>
         </Navbar.Collapse>

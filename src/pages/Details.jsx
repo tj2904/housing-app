@@ -14,10 +14,10 @@ export default function Details() {
   return (
     <>
       <h2>Law Firm Details Page</h2>
-      <h5 className="my-4 lead">
+      <h3 className="my-4 lead">
         The organisations listed below are known to offer Legal Aid services for
         your kind of case.
-      </h5>
+      </h3>
       <p>
         Use the contact details below to try to arrange an appointment and/or
         for them to agree to represent you and your case at court.
