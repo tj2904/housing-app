@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Alert } from "react-bootstrap";
 import SolicitorCard from "../components/SolicitorCard";
 import data from "../data/housing-solicitors";
 import AlertAttendCourt from "../components/AlertAttendCourt";

@@ -1,10 +1,9 @@
-import React  from "react";
+import React from "react";
 import { Card, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import checkScreen from "../img/legalAidCheckScreen.png";
 import outcomeNo from "../img/outcomeNo.png";
 import cla from "../img/CLA-small.png";
-import outcomeYes from "../img/outcomeYes.png";
 
 function Eligibility() {
   return (
@@ -17,8 +16,10 @@ function Eligibility() {
 
       <p>
         Once you have completed the Government's eligibility check, come back to
-        this page and select the image that matches your outcome. If you see <strong>"Contact Civil Legal Advice"</strong>, you can do that or contact a Solicitor directly for Legal Aid, then we will provide you with a list of
-        Solicitors that might able to help you.
+        this page and select the image that matches your outcome. If you see{" "}
+        <strong>"Contact Civil Legal Advice"</strong>, you can do that or
+        contact a Solicitor directly for Legal Aid, then we will provide you
+        with a list of Solicitors that might able to help you.
       </p>
       <p>
         If you do not qualify for Legal Aid, then you should take the form you
@@ -72,22 +73,6 @@ function Eligibility() {
           </Row>
         </div>
       </div>
-      {/*
-      <div>
-        <a
-          href="https://www.gov.uk/check-legal-aid"
-          role="button"
-          className="m-2 btn btn-dark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Check if you are eligible for Legal Aid
-        </a>
-        <Link to="/details" role="button" className="m-2 btn btn-info">
-          See Details of Solicitors
-        </Link>
-      </div>
-*/}
     </>
   );
 }

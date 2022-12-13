@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import html2pdf from "html2pdf.js";
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import AlertAttendCourt from "../components/AlertAttendCourt";
 
 function CourtInfo() {
@@ -29,7 +29,6 @@ function CourtInfo() {
 
   return (
     <>
-      {/*add HTML code to this block before the final </> tag  */}
       <h2>Court Infomation Questionnaire</h2>
       <div className="lead mb-3">
         Please complete this form ahead of your court date ready to share with

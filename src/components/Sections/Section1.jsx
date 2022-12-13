@@ -32,7 +32,7 @@ export const Section1 = () => {
         </div>
         <div class="col cont-img-pri">
           <div className="cont-img-sec1">
-            <img src={House} width="100%" className="img-fluid" />
+            <img src={House} width="100%" className="img-fluid" alt="logo"/>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Alert } from "react-bootstrap";
 import AlertAttendCourt from "../components/AlertAttendCourt";
 
 function HasSolicitor() {
