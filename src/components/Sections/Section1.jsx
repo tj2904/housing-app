@@ -25,9 +25,7 @@ export const Section1 = () => {
           </div>
 
           <Link to="/court">
-            <button type="button" class="btn btn-primary btn-lg mt-4">
-              Click Here
-            </button>
+            <button type="button" class="btn btn-primary btn-lg mt-4">Click Here</button>
           </Link>
         </div>
         <div class="col cont-img-pri">

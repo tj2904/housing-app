@@ -1,8 +1,14 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from './components/App';
+import React from "react";
+import "@testing-library/jest-dom";
 
-test('renders learn react link', () => {
+test('renders without crashing', () => { 
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+});
+
+test('renders site title correctly', () => {
+  render(<App />);
+  const siteName = screen.getByText("Eviction Prevention");
+  expect(siteName).toBeInTheDocument();
 });

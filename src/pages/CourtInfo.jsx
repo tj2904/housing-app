@@ -102,6 +102,7 @@ function CourtInfo() {
           type="button"
           className="btn btn-success m-2"
           onClick={handleDownload}
+          data-testid="download-button"
         >
           💾 📄 Download as a PDF
         </Button>

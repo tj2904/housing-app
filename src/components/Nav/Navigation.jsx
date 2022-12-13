@@ -3,20 +3,11 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import home from "../../img/home.png";
 
 export const Navigation = () => {
-  // useState sets an error message if needed
- 
-  // navigate allows for sending the user to a given route
-  
-
-  
 
   const menu = [
-    //{ title: "Home", link: "/" },
-    // { title: "About", link: "/" },
     { title: "Eligibility", link: "/eligibility" },
     { title: "Solicitor Information", link: "/details" },
     { title: "Court Form", link: "/court" },
-    // { title: "Contact", link: "/" },
   ];
 
   return (
@@ -36,7 +27,7 @@ export const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {menu.map((res) => {
-              return <Nav.Link href={res.link} className="nav-link active">{res.title}</Nav.Link>;
+              return <Nav.Link href={res.link} key={res.title} className="nav-link active">{res.title}</Nav.Link>;
             })}
           </Nav>
         </Navbar.Collapse>
