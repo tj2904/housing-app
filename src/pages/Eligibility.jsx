@@ -72,22 +72,7 @@ function Eligibility() {
           </Row>
         </div>
       </div>
-      {/*
-      <div>
-        <a
-          href="https://www.gov.uk/check-legal-aid"
-          role="button"
-          className="m-2 btn btn-dark"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Check if you are eligible for Legal Aid
-        </a>
-        <Link to="/details" role="button" className="m-2 btn btn-info">
-          See Details of Solicitors
-        </Link>
-      </div>
-*/}
+
     </>
   );
 }
