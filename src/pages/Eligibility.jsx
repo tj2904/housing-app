@@ -7,7 +7,7 @@ import cla from "../img/CLA-small.png";
 
 function Eligibility() {
   return (
-    <>
+    <main>
       <h2>Legal Aid Eligibility</h2>
 
       <p className="lead">
@@ -73,7 +73,7 @@ function Eligibility() {
           </Row>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
