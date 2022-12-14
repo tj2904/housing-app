@@ -1,11 +1,8 @@
 # Getting Started with the Housing App
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) is a requirement for this project, and is avaliable to Windows (incl. WSL2), Mac & Linux.
 
 Clone the repo locally and run `npm install` in install all of the required dependencies.
-
-Add a `.env` file in the root of the project to connect Firebase to the App. Details for the contents are on [Confluence](https://castild21.atlassian.net/wiki/spaces/HA/pages/1966085/.env+file).
 
 `npm start` runs the app in the development mode, if it doesn't do so automatically, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -17,12 +14,11 @@ You may also see any lint errors in the console.
 
 In the project directory, you can run:
 
-
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These should be run locally before creating a PR, they will be run by a Github action on each PR too.
 
 ### `npm run build`
 
