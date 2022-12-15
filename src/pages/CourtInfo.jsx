@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import html2pdf from "html2pdf.js";
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import AlertAttendCourt from "../components/AlertAttendCourt";
 
 function CourtInfo() {
