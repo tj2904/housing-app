@@ -1,4 +1,5 @@
-export default [
+const solicitorData = 
+[
   {
     id: "1",
     Firm: "Wainwright & Cummins Solicitors",
@@ -181,3 +182,5 @@ export default [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.8171419280543!2d-0.11334894863852413!3d51.47987067953065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876057581702571%3A0x2526a497893cae1f!2sAbbotts%20Martin%20Solicitors!5e0!3m2!1sen!2suk!4v1667549209816!5m2!1sen!2suk",
   },
 ];
+
+export default solicitorData;

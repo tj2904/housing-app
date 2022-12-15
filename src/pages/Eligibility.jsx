@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import checkScreen from "../img/legalAidCheckScreen.png";
 import outcomeNo from "../img/outcomeNo.png";
@@ -7,7 +7,7 @@ import cla from "../img/CLA-small.png";
 
 function Eligibility() {
   return (
-    <>
+    <main>
       <h2>Legal Aid Eligibility</h2>
       <p className="lead">
         Please check if you qualify for Legal Aid using the government site:
@@ -73,7 +73,7 @@ function Eligibility() {
           </Card>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

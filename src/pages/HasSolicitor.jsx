@@ -4,6 +4,7 @@ import AlertAttendCourt from "../components/AlertAttendCourt";
 function HasSolicitor() {
   return (
     <>
+    <main>
       <div>
         <h1>I Have Found A Solicitor</h1>
         <p className="lead">
@@ -15,6 +16,7 @@ function HasSolicitor() {
           help you give them all the details that they need to support you.
         </p>
       </div>
+      </main>
       <AlertAttendCourt />
     </>
   );

@@ -13,23 +13,22 @@ export default function Details() {
 
   return (
     <>
-      <h2>Law Firm Details Page</h2>
-      <h5 className="my-4 lead">
-        The organisations listed below are known to offer Legal Aid services for
-        your kind of case.
-      </h5>
-      <p>
-        Use the contact details below to try to arrange an appointment and/or
-        for them to agree to represent you and your case at court.
-        <br />
-        When you have either found representation, or exhausted the list of
-        contacts click the button at the bottom of the page to complete our
-        pre-court form to support you and your legal counsel to best represent
-        your case in court.
-      </p>
-      <div className="pt-2">
-        {firm}
-
+      <main>
+        <h2>Law Firm Details Page</h2>
+        <h3 className="my-4 lead">
+          The organisations listed below are known to offer Legal Aid services
+          for your kind of case.
+        </h3>
+        <p>
+          Use the contact details below to try to arrange an appointment and/or
+          for them to agree to represent you and your case at court.
+          <br />
+          When you have either found representation, or exhausted the list of
+          contacts click the button at the bottom of the page to complete our
+          pre-court form to support you and your legal counsel to best represent
+          your case in court.
+        </p>
+        <div className="pt-2">{firm}</div>
         <div className="text-center">
           <Link
             to="/hassolicitor"
@@ -42,8 +41,8 @@ export default function Details() {
             I was not able to find a solicitor to represent me
           </Link>
         </div>
-        <AlertAttendCourt />
-      </div>
+      </main>
+      <AlertAttendCourt />
     </>
   );
 }

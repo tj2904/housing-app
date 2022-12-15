@@ -25,7 +25,6 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/details" element={<Details />} />
           <Route path="/eligibility" element={<Eligibility />} />
-
           <Route path="/nosolicitor" element={<NoSolicitor />} />
           <Route path="/hassolicitor" element={<HasSolicitor />} />
         </Routes>
